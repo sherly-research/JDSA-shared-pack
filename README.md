@@ -33,5 +33,3 @@ If you use this repository or the Zenodo artifacts, please cite:
 
 Sherly Christina, Azhari Azhari, Yohanes Suyanto.
 Enhancing Aspect Discovery through a Bifurcated Hybrid Approach for Extracting Relevant Terms from Unstructured-Unlabeled Energy Data. JDSA submission.
-## Repository structure
-# JDSA-shared-pack
