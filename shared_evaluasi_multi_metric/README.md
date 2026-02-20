@@ -1,15 +1,29 @@
 # Read Me
 
-This share pack is a **minimal, self-contained** bundle to let readers reproduce the two evaluation programs:
+This share pack is a **minimal, self-contained** bundle to reproduce the two evaluation programs:
 
 1. **Silver Testing (intersection-based, quality-/context-aware reporting)**  
 2. **Output-based Intrinsic Metrics (overall + by-source; ablation + baseline-aligned tracks)**
 
-The pack contains:
-- Patched notebooks (local paths; no Google Drive dependency)
-- All input CSVs used by the notebooks
-- Precomputed outputs (CSV summaries) used in the manuscript, to compare against regenerated outputs
-- A file manifest (SHA256) for integrity checks
+The GitHub repository provides the **patched notebooks** and code.  
+**Large input datasets (including baselines) are archived on Zenodo** and must be downloaded separately (see below).
+
+---
+
+## Data availability (Zenodo)
+
+The datasets and precomputed outputs required by the evaluation notebooks are archived on Zenodo:
+
+- **Zenodo (v1.0.0)**: https://doi.org/10.5281/zenodo.18707970  
+- **Zenodo (all versions / concept DOI)**: https://doi.org/10.5281/zenodo.18707969
+
+This Zenodo record contains three ZIP archives:
+- `data.zip`
+- `dataset_baselines.zip`
+- `outputs_bifurcated_hybrid_ate.zip`
+
+> **Important:** The evaluation notebooks expect files under `./data/dataset_baseline/`.  
+> After downloading, extract/copy the CSVs into that folder (instructions below).
 
 ---
 
@@ -20,13 +34,6 @@ shared_evaluasi_multi_metric/
   notebooks/
     01_Evaluate_SilverTesting_patched.ipynb
     02_Evaluate_outputbased_intrinsic_metrics_patched.ipynb
-  data/
-    dataset_baseline/        # the exact folder the notebooks expect
-      rb_apect_terms_full_with_segtext.csv
-      unsup_terms_ranked_full_with_segtext.csv
-      dataset_hybrid_best_terms_sbert.csv
-      baseline_aspect_terms_*.csv
-      dataset_baseline_CTM.csv
   precomputed_outputs/
     silver/                  # manuscript silver summaries
     intrinsic/               # manuscript intrinsic summaries
